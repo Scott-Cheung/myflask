@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+    {{ super() }}
+    {% include 'includes/_head.html' %}
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet"
+          href={{ url_for('static',filename='bootstrap.min.css') }}>
+{% endblock %}
+
+{% block navbar %}
+    {% include 'includes/_nav.html' %}
+{% endblock %}
+
+{% block content %}
+    <header>{% block header %}{% endblock %}</header>
+    <footer>
+        <hr>
+        <p>Copyright 2017 by <a href="#">Troy</a></p>
+    </footer>
+{% endblock %}
+
+
