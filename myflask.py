@@ -10,11 +10,15 @@ Bootstrap(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html',title=u'主页')
+    return render_template('index.html',title=u'TROJANDATA')\
+
+@app.route('/course')
+def course():
+    return render_template('course.html',title=u'HOW DID I BUILD MY WEBSITE?')
 
 @app.route('/about')
 def about():
-    return render_template('about.html',title=u'关于')
+    return render_template('about.html',title=u'ABOUT')
 
 
 if __name__ == '__main__':
